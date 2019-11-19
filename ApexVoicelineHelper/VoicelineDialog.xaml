@@ -1,0 +1,24 @@
+﻿<Window x:Class="ApexVoicelineHelper.VoicelineDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApexVoicelineHelper"
+        mc:Ignorable="d"
+        Title="Add Voiceline" Height="144.707" Width="400" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid Height="22" Margin="10,0,10,10" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnDialogAdd" Content="_Add" Margin="0,0,2,0" IsDefault="True" Click="BtnDialogAdd_Click"/>
+            <Button Content="_Cancel" Grid.Column="1" Margin="2,0,0,0" IsCancel="True"/>
+        </Grid>
+        <Label x:Name="label" Content="Key" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbKey" VerticalAlignment="Top" VerticalContentAlignment="Center" ToolTip="The path of the text file that contains voiceline information." Margin="57,10,10,0" Height="22"/>
+        <Label x:Name="label_Copy" Content="Name" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbName" Margin="57,38,10,0" VerticalAlignment="Top" IsEditable="True" ItemsSource="{Binding}"/>
+
+    </Grid>
+</Window>
